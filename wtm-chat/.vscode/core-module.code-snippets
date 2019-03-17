@@ -3,13 +3,22 @@
 		"scope": "typescript",
 		"prefix": "user-service-user-generate",
 		"body": [
-            "users = [",
-            "\t{name: 'User1', online: true},",
-            "\t{name: 'User2', online: true},",
-            "\t{name: 'User3', online: false},",
-            "\t{name: 'User4', online: false},",
-            "\t{name: 'User5', online: false},",
-            "];"
+                  "users = [",
+                  "\t{name: 'User1', online: true},",
+                  "\t{name: 'User2', online: true},",
+                  "\t{name: 'User3', online: false},",
+                  "\t{name: 'User4', online: false},",
+                  "\t{name: 'User5', online: false}",
+                  "];"
+		]
+      },
+      "Add getUser in user-service": {
+		"scope": "typescript",
+		"prefix": "user-service-get-user-method",
+		"body": [
+                  "getUsers() {",
+                  "\treturn of(this.users);",
+                  "}"
 		]
 	},
 }
