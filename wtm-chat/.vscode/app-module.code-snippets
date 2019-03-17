@@ -10,7 +10,7 @@
 	},
 	"Import ng-modules in app-module": {
 		"scope": "typescript",
-		"prefix": "app-module-import-1",
+		"prefix": "app-module-import-2",
 		"body": [
 			"CoreModule,",
     		"UsersPanelModule,",
