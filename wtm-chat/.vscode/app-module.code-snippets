@@ -1,0 +1,20 @@
+{
+	"Import modules in app-module": {
+		"scope": "typescript",
+		"prefix": "app-module-import-1",
+		"body": [
+			"import { CoreModule } from './core/core.module';",
+			"import { UsersPanelModule } from './users-panel/users-panel.module';",
+			"import { MessagePanelModule } from './message-panel/message-panel.module';",
+		]
+	},
+	"Import ng-modules in app-module": {
+		"scope": "typescript",
+		"prefix": "app-module-import-1",
+		"body": [
+			"CoreModule,",
+    		"UsersPanelModule,",
+    		"MessagePanelModule",
+		]
+	}
+}
