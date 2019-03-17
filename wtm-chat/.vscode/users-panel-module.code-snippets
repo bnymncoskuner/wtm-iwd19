@@ -16,7 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"Add count panel to users-panel": {
-		"scope": "typescript",
+		"scope": "html",
 		"prefix": "users-panel-count-panel",
 		"body": [
 			"<div class=\"count-panel\">",
