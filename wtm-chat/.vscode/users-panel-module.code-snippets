@@ -15,6 +15,19 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"Users-panel initial html": {
+		"scope": "html",
+		"prefix": "users-panel-initial-html",
+		"body": [
+			"<ng-container *ngIf=\"users$ | async; let users\">",
+  			"\t<ul>",
+    		"\t\t<li *ngFor=\"let user of users\">",
+      		"\t\t\t{{user.name}} {{user.online}}",
+    		"\t\t</li>",
+  			"\t</ul>",
+			"</ng-container>"
+		]
+	},
 	"Add count panel to users-panel": {
 		"scope": "html",
 		"prefix": "users-panel-count-panel",
@@ -37,5 +50,49 @@
 			"}"
 		]
 	},
+	"Add inputs to user-info.component": {
+		"scope": "typescript",
+		"prefix": "user-info-inputs",
+		"body": [
+			"@Input() name: string;",
+			"@Input() online: boolean;"
+		]
+	},
+	"Add template to user-info html": {
+		"scope": "html",
+		"prefix": "user-info-html",
+		"body": [
+			"<div [class.online]=\"online\">",
+  			"\t<mat-icon>person</mat-icon>",
+  			"\t<span>{{name}}</span>",
+			"</div>"
+		]
+	},
+	"Use wtm-user-info with *ngFor in users-panel": {
+		"scope": "html",
+		"prefix": "user-info-html-user-info",
+		"body": [
+			"<wtm-user-info *ngFor=\"let user of users\"",
+			"\t[name]=\"user.name\"",
+			"\t[online]=\"user.online\">",
+			"</wtm-user-info>"
+		]
+	},
+	"Add user-info css": {
+		"scope": "scss",
+		"prefix": "user-info-css",
+		"body": [
+			"mat-icon {",
+			"\tcolor: red;",
+			"\tvertical-align: middle;",
+			"}",
+			"",
+			".online {",
+			"\tmat-icon {",
+			"\t\tcolor: green;",
+			"\t}",
+			"}"
+		]
+	}
 
 }
