@@ -3,10 +3,9 @@
     <span>Total: {{users.length}}</span>
     <span class="online-count"> Online: {{users | userCount}}</span>
   </div>
-  
-  <ul>
-    <li *ngFor="let user of users">
-      {{user.name}} {{user.online}}
-    </li>
-  </ul>
+
+  <wtm-user-info *ngFor="let user of users"
+    [name]="user.name"
+    [online]="user.online">
+  </wtm-user-info>
 </ng-container>
