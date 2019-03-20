@@ -1,4 +1,8 @@
-<wtm-message 
-  *ngFor="let message of message$ | async"
-  [message]="message">
-</wtm-message>
+<div class="message-panel" #messagePanel [scrollTop]="messagePanel.scrollHeight">
+  <wtm-message *ngFor="let message of message$ | async"
+    [message]="message"
+    [self]="message.self">
+  </wtm-message>
+</div>
+
+<wtm-input></wtm-input>

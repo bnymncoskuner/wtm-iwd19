@@ -4,7 +4,7 @@ import { MessageService } from '../core/services/message.service';
 @Component({
   selector: 'wtm-message-panel',
   templateUrl: './message-panel.component.html',
-  styleUrls: ['./message-panel.component.sass']
+  styleUrls: ['./message-panel.component.scss']
 })
 export class MessagePanelComponent implements OnInit {
 
