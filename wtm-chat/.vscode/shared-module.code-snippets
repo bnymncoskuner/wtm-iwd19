@@ -53,7 +53,7 @@
 			"<mat-form-field>",
 			"\t<input matInput type=\"text\"",
 			"\t\t[placeholder]=\"placeholder\"",
-			"\t\t[ngModel]=\"value\" (ngModelChange)=\"updateValue($event)\">",
+			"\t\t[ngModel]=\"value\" (ngModelChange)=\"updateValue(\\$event)\">",
 			"</mat-form-field>"
 		]
 	},
@@ -69,6 +69,19 @@
 			"\t(click)=\"onClick()\">",
 			"\t<mat-icon>{{icon}}</mat-icon>",
 			"</button>\n"
+		]
+	},
+	"Define input component scss": {
+		"scope": "scss",
+		"prefix": "input-comp-css",
+		"body": [
+			"mat-form-field {",
+			"\twidth: 100%;",
+			"",
+			"\tbutton[mat-button] {",
+			"\t\tfont-size: 2em;",
+			"\t}",
+			"}"
 		]
 	}
 }

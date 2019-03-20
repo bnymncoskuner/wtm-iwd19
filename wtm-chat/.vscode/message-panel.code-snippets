@@ -146,5 +146,10 @@
 			"\t}",
 			"}\n"			  
 		]
+	},
+	"Bind input component inputs": {
+		"scope": "html",
+		"prefix": "message-panel-input-binding",
+		"body": "placeholder=\"Type something\" icon=\"send\""
 	}
 }
