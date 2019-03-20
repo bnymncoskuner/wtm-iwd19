@@ -1,0 +1,67 @@
+.message {
+    position: relative;
+    padding: 3px 15px 3px 15px;
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .bubble {
+        position: relative;
+        max-width: 65%;
+        border-radius: 7.5px;
+        position: relative;
+        box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+        padding: 6px 0 8px 0;
+        padding-left: 9px;
+        padding-right: 7px;
+        min-width: 110px;
+        box-sizing: border-box;
+
+        .sender {
+            color: #74cff8;
+            display: -webkit-flex;
+            display: flex;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+
+        .text {
+            position: relative;
+            word-wrap: break-word;
+            margin-bottom: 10px;
+        }
+
+        &.message-out {
+            background-color: #dcf8c6;
+            float: right;
+            padding-right: 15px;
+            border-top-left-radius: 7.5px;
+            border-top-right-radius: 0px;
+        }
+
+        &.message-in {
+            background-color: #fff;
+            float: left;
+            padding-left: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 7.5px;
+        }
+
+        .time {
+            position: absolute;
+            bottom: 3px;
+            right: 7px;
+            color: rgba(0, 0, 0, 0.45);
+            font-family: "Roboto", sans-serif;
+            font-size: 11px;
+            height: 15px;
+            line-height: 15px;
+            white-space: nowrap;
+        }
+    }
+}

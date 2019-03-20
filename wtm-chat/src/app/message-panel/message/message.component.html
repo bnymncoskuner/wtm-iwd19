@@ -1,3 +1,14 @@
-<p>
-  message works!
-</p>
+<div class="message">
+  <div class="bubble" *ngIf="message"
+    [ngClass]="{'message-out': self, 'message-in': !self}">
+    <div class="sender" *ngIf="!self">
+      {{message.sender.name}}
+    </div>
+    <div class="text">
+      {{message.text}}
+    </div>
+      <div class="time">
+      {{message.date | date:'shortTime' }}
+    </div>
+  </div>
+</div>
