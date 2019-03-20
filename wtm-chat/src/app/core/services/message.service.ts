@@ -9,12 +9,22 @@ export class MessageService {
   constructor() { }
 
   getMessages() {
-    return of([{
+    const messages = [{
       sender: {
         name: 'User1'
       },
       text: 'Hello World',
-      date: new Date()
-    }]);
+      date: new Date(),
+      self: true
+    }, {
+      sender: {
+        name: 'User2'
+      },
+      text: 'Hello User2',
+      date: new Date(),
+      self: false
+    }]
+
+    return of(messages);
   }
 }
