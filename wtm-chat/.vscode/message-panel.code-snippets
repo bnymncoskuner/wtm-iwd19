@@ -115,5 +115,36 @@
 			"\t}",
 			"}\n"
 		]
+	},
+	"Put message panel html": {
+		"scope": "html",
+		"prefix": "message-panel-html",
+		"body": [
+			"<div class=\"message-panel\">",
+			"\t<wtm-message *ngFor=\"let message of messages$ | async\"",
+			"\t\t[message]=\"message\"",
+			"\t\t[self]=\"message.self\">",
+			"\t</wtm-message>",
+			"</div>\n"
+		]
+	},
+	"Put message panel html scrollTop": {
+		"scope": "html",
+		"prefix": "message-panel-scroll-top",
+		"body": "#messagePanel [scrollTop]=\"messagePanel.scrollHeight\""
+	},
+	"Put message panel scss": {
+		"scope": "scss",
+		"prefix": "message-panel-scss",
+		"body": [
+			":host {",
+			"\t.message-panel {",
+			"\t\tbackground-color: #efefef;",
+			"\t\tmax-height: 750px;",
+			"\t\toverflow-y: auto;",
+			"\t\tdisplay: block;",
+			"\t}",
+			"}\n"			  
+		]
 	}
 }
