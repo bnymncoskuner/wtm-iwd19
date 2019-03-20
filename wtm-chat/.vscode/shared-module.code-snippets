@@ -29,5 +29,46 @@
     		"MatInputModule,",
     		"MatButtonModule"
 		]
+	},
+	"Put inputs in input.component": {
+		"scope": "typescript",
+		"prefix": "input-comp-define-inputs",
+		"body": [
+			"@Input() placeholder;",
+			"@Input() icon;",
+			"@Input() value;"
+		]
+	},
+	"Put valueChange output in input.component": {
+		"scope": "typescript",
+		"prefix": "input-comp-define-output",
+		"body": [
+			"@Output() valueChange: EventEmitter<any> = new EventEmitter();"
+		]
+	},
+	"Use mat form field in input.component": {
+		"scope": "html",
+		"prefix": "input-comp-mat-input",
+		"body": [
+			"<mat-form-field>",
+			"\t<input matInput type=\"text\"",
+			"\t\t[placeholder]=\"placeholder\"",
+			"\t\t[ngModel]=\"value\" (ngModelChange)=\"updateValue($event)\">",
+			"</mat-form-field>"
+		]
+	},
+	"Use mat button in input.component": {
+		"scope": "html",
+		"prefix": "input-comp-button",
+		"body": [
+			"<button *ngIf=\"icon\"",
+			"\tmat-button",
+			"\tmatSuffix",
+			"\tmat-icon-button",
+			"\t[disabled]=\"!value\"",
+			"\t(click)=\"onClick()\">",
+			"\t<mat-icon>{{icon}}</mat-icon>",
+			"</button>\n"
+		]
 	}
 }
