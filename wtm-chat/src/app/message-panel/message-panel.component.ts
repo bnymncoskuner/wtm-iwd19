@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../core/services/message.service';
 
 @Component({
   selector: 'wtm-message-panel',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagePanelComponent implements OnInit {
 
-  constructor() { }
+  message$;
+
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
+    this.message$ = this.messageService.getMessages();
   }
 
 }

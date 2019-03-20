@@ -1,3 +1,4 @@
-<p>
-  message-panel works!
-</p>
+<wtm-message 
+  *ngFor="let message of message$ | async"
+  [message]="message">
+</wtm-message>
