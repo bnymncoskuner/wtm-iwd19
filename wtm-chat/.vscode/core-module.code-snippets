@@ -11,8 +11,8 @@
                   "\t{name: 'User5', online: false}",
                   "];"
 		]
-      },
-      "Add getUser in user-service": {
+   },
+   "Add getUser in user-service": {
 		"scope": "typescript",
 		"prefix": "user-service-get-user-method",
 		"body": [
@@ -20,5 +20,30 @@
                   "\treturn of(this.users);",
                   "}"
 		]
-	},
+   },
+   "Add getMessages in message-service": {
+      "scope": "typescript",
+      "prefix": "message-service-get-messages-method",
+      "body": [
+         "getMessages() {",
+         "\tconst messages = [{",
+         "\t\tsender: {",
+         "\t\t\tname: 'User1'",
+         "\t\t},",
+         "\t\ttext: 'Hello World',",
+         "\t\tdate: new Date(),",
+         "\t\tself: true",
+         "\t}, {",
+         "\t\tsender: {",
+         "\t\t\tname: 'User2'",
+         "\t\t},",
+         "\t\ttext: 'Hello User2',",
+         "\t\tdate: new Date(),",
+         "\t\tself: false",
+         "\t}]",
+         "",
+         "\treturn of(messages);",
+         "}\n"
+      ]
+   }
 }
