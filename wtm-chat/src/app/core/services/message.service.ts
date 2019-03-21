@@ -27,4 +27,8 @@ export class MessageService {
 
     return of(messages);
   }
+
+  sendMessage(message) {
+    // todo
+  }
 }
