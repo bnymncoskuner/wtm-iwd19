@@ -4,8 +4,9 @@
     <span class="online-count"> Online: {{users | userCount}}</span>
   </div>
 
-  <wtm-user-info *ngFor="let user of users"
-    [name]="user.name"
-    [online]="user.online">
+  <wtm-user-info *ngFor="let user of users" 
+    [name]="user.name" 
+    [online]="user.online" 
+    [self]="user.id === userService.user?.id">
   </wtm-user-info>
 </ng-container>

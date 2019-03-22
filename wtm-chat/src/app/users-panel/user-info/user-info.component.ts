@@ -9,6 +9,7 @@ export class UserInfoComponent implements OnInit {
 
   @Input() name: string;  
   @Input() online: boolean;
+  @Input() self: boolean;
 
   constructor() { }
 

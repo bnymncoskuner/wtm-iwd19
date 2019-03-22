@@ -11,7 +11,7 @@ export class UsersPanelComponent implements OnInit {
 
   users$;
 
-  constructor(private userService: UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
     this.users$ = this.userService.getUsers();

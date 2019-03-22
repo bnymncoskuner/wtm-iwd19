@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { UserService } from './core/services/user.service';
 
 @Component({
   selector: 'wtm-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'wtm-chat';
+  
+  constructor(private userService: UserService) {}
+
+  @HostListener('window:beforeunload', ['$event'])
+  logout($event) {
+    this.userService.logout();
+  }
 }

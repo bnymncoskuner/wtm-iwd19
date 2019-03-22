@@ -1,7 +1,7 @@
 <div class="message-panel" #messagePanel [scrollTop]="messagePanel.scrollHeight">
   <wtm-message *ngFor="let message of message$ | async"
     [message]="message"
-    [self]="message.self">
+    [self]="message?.sender?.id === userService?.user?.id">
   </wtm-message>
 </div>
 

@@ -1,7 +1,8 @@
 <mat-form-field>
   <input matInput type="text"
     [placeholder]="placeholder"
-    [ngModel]="value" (ngModelChange)="updateValue($event)">
+    [ngModel]="value" (ngModelChange)="updateValue($event)"
+    (keyup.enter)="onClick()">
   <button *ngIf="icon"
     mat-button
     matSuffix

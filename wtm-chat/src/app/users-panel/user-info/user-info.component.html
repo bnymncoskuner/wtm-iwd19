@@ -1,4 +1,4 @@
 <div [class.online]="online">
-  <mat-icon>person</mat-icon>
-  <span>{{name}}</span>
+  <mat-icon>person</mat-icon> 
+  <span> {{name}}</span><span *ngIf="self"> (You)</span>
 </div>
