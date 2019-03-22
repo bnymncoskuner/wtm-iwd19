@@ -16,5 +16,20 @@
     		"UsersPanelModule,",
     		"MessagePanelModule",
 		]
+	},
+	"Add bootstrap classes in app.component": {
+		"scope": "html",
+		"prefix": "app-component-layout",
+		"body": [
+			"<div class=\"row col-12\">",
+			"\t<div class=\"col-4\">",
+			"\t\t<wtm-users-panel></wtm-users-panel>",
+			"\t</div>",
+			"\t<div class=\"col-8\">",
+			"\t\t<wtm-message-panel></wtm-message-panel>",
+			"\t</div>",
+			"</div>",
+			"<wtm-login></wtm-login>\n"
+		]
 	}
 }

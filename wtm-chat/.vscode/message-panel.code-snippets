@@ -121,7 +121,7 @@
 		"prefix": "message-panel-html",
 		"body": [
 			"<div class=\"message-panel\">",
-			"\t<wtm-message *ngFor=\"let message of messages$ | async\"",
+			"\t<wtm-message *ngFor=\"let message of message$ | async\"",
 			"\t\t[message]=\"message\"",
 			"\t\t[self]=\"message.self\">",
 			"\t</wtm-message>",
@@ -146,5 +146,10 @@
 			"\t}",
 			"}\n"			  
 		]
+	},
+	"Bind input component inputs": {
+		"scope": "html",
+		"prefix": "message-panel-input-binding",
+		"body": "placeholder=\"Type something\" icon=\"send\""
 	}
 }
