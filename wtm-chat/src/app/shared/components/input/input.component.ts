@@ -10,6 +10,7 @@ export class InputComponent implements OnInit {
   @Input() placeholder;
   @Input() icon;
   @Input() value;
+  @Input() maxlength;
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
   @Output() btnClick: EventEmitter<any> = new EventEmitter();
 

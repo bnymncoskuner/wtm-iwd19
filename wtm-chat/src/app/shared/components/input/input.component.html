@@ -1,6 +1,7 @@
 <mat-form-field>
   <input matInput type="text"
     [placeholder]="placeholder"
+    [attr.maxlength]="maxlength"
     [ngModel]="value" (ngModelChange)="updateValue($event)"
     (keyup.enter)="onClick()">
   <button *ngIf="icon"
