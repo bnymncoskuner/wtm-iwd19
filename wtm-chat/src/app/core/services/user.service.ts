@@ -28,11 +28,11 @@ export class UserService {
   }
 
   getUsers() {
-    return this.fbService.listWithSnapshot(this.tableName)
-      .pipe(map(snapshots => snapshots.map(data => {
+    return this.fbService.object(this.tableName)
+      .pipe(map(snapshots => Object.keys(snapshots).map(key => {
         return {
-          id: data.key,
-          ...data.payload.val()
+          id: key,
+          ...snapshots[key]
         }
       })));
   }

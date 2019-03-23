@@ -20,7 +20,7 @@ export class FirebaseService {
     return this.db.list(dbName).valueChanges();
   }
 
-  listWithSnapshot(dbName: string) {
-    return this.db.list(dbName).snapshotChanges();
+  object(dbName: string) {
+    return this.db.object(dbName).valueChanges();
   }
 }
