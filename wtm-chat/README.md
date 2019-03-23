@@ -14,13 +14,11 @@ Following dependencies are installed
 
 `npm install @angular/material @angular/cdk @angular/animations --save`
 
-`npm install bootstrap --save`
 
 Add following lines are added to `styles.scss`
 
 ```scss
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "~bootstrap/scss/bootstrap-grid";
 ```
 
 Add following lines to `index.html`
