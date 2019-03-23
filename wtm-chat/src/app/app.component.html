@@ -1,9 +1,14 @@
-<div class="row col-12">
-  <div class="col-4">
-    <wtm-users-panel></wtm-users-panel>
-  </div>
-  <div class="col-8">
-    <wtm-message-panel></wtm-message-panel>
-  </div>
+<div style="margin-bottom: 10px;">
+  <button mat-raised-button color="primary" (click)="drawer.toggle()">Toggle user panel</button>
 </div>
+
+
+<mat-drawer-container [hasBackdrop]="true">
+  <mat-drawer #drawer mode="push">
+    <wtm-users-panel></wtm-users-panel>
+  </mat-drawer>
+  <mat-drawer-content>
+    <wtm-message-panel></wtm-message-panel>
+  </mat-drawer-content>
+</mat-drawer-container>
 <wtm-login></wtm-login>
