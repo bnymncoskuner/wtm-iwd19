@@ -8,7 +8,15 @@
 			"import { MessagePanelModule } from './message-panel/message-panel.module';",
 		]
 	},
-	"Import ng-modules in app-module": {
+	"Import material modules in app-module": {
+		"scope": "typescript",
+		"prefix": "app-module-material-import",
+		"body": [
+			"import { MatSidenavModule } from '@angular/material/sidenav';",
+			"import { MatButtonModule } from '@angular/material';"
+		]
+	},
+	"Use ng-modules in app-module": {
 		"scope": "typescript",
 		"prefix": "app-module-import-2",
 		"body": [
@@ -17,19 +25,41 @@
     		"MessagePanelModule",
 		]
 	},
-	"Add bootstrap classes in app.component": {
+	"Use material modules in app-module": {
+		"scope": "typescript",
+		"prefix": "app-module-material-use",
+		"body": [
+			"MatSidenavModule,",
+    		"MatButtonModule",
+		]
+	},
+	"Add material drawer in app.component": {
 		"scope": "html",
 		"prefix": "app-component-layout",
 		"body": [
-			"<div class=\"row col-12\">",
-			"\t<div class=\"col-4\">",
-			"\t\t<wtm-users-panel></wtm-users-panel>",
-			"\t</div>",
-			"\t<div class=\"col-8\">",
-			"\t\t<wtm-message-panel></wtm-message-panel>",
-			"\t</div>",
+			"<div style=\"margin-bottom: 10px;\">",
+			"\t<button mat-raised-button color=\"primary\" (click)=\"drawer.toggle()\">Toggle user panel</button>",
 			"</div>",
-			"<wtm-login></wtm-login>\n"
+			"\n",
+			"<mat-drawer-container [hasBackdrop]=\"true\">",
+			"\t<mat-drawer #drawer mode=\"push\">",
+			"\t\t<wtm-users-panel></wtm-users-panel>",
+			"\t</mat-drawer>",
+			"\t<mat-drawer-content>",
+			"\t\t<wtm-message-panel></wtm-message-panel>",
+			"\t</mat-drawer-content>",
+			"</mat-drawer-container>",
+			"<wtm-login></wtm-login>"
+
+		]
+	},
+	"Add minimum width to mat-drawer": {
+		"scope": "scss",
+		"prefix": "app-component-scss",
+		"body": [
+			"mat-drawer {",
+			"\tmin-width: 180px;",
+			"}\n",			
 		]
 	}
 }
