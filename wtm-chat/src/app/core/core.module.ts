@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -17,7 +16,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     SharedModule,
     MatDialogModule
   ],
