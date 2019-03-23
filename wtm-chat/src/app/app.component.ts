@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from './core/services/user.service';
 
 @Component({
@@ -6,12 +6,18 @@ import { UserService } from './core/services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   
   constructor(private userService: UserService) {}
 
-  @HostListener('window:beforeunload', ['$event'])
-  logout($event) {
-    this.userService.logout();
+  ngOnInit() {
+    window.onbeforeunload = () => {
+      this.userService.logout();
+    };
+
+    window.onunload = () => {
+      this.userService.logout();
+    };
   }
+
 }

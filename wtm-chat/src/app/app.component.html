@@ -1,6 +1,7 @@
-<div style="margin-bottom: 10px;">
-  <button mat-raised-button color="primary" (click)="drawer.toggle()">Toggle user panel</button>
-</div>
+<mat-toolbar color="primary" class="toolbar">
+  <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+  <h1>WTM Chat</h1>
+</mat-toolbar>
 
 <mat-drawer-container [hasBackdrop]="true">
   <mat-drawer #drawer mode="push">

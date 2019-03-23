@@ -1,8 +1,17 @@
 :host {
+    
     .message-panel {
         background-color: #efefef;
-        max-height: 750px;
         overflow-y: auto;
         display: block;
+        padding: 5px;
+        height: 100%;
+    }
+
+    wtm-input {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
     }
 }

@@ -1,7 +1,33 @@
-mat-drawer {
-    min-width: 180px;
-}
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-mat-drawer-container {
-    height: 100%;
+    mat-drawer-container {
+        height: 100%;
+    }
+
+    @media(max-width: 600px) {
+        .toolbar {
+            position: fixed;
+            z-index: 2;
+        }
+
+        mat-drawer-container {
+            margin-top: 56px;
+        }
+    }
+      
+      
+    h1 {
+        margin-left: 8px;
+    }
+
+    mat-drawer {
+        min-width: 180px;
+    }
 }
