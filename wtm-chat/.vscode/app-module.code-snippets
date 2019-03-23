@@ -13,7 +13,7 @@
 		"prefix": "app-module-material-import",
 		"body": [
 			"import { MatSidenavModule } from '@angular/material/sidenav';",
-			"import { MatButtonModule } from '@angular/material';"
+			"import { MatButtonModule, MatToolbarModule, MatIconModule } from '@angular/material';"
 		]
 	},
 	"Use ng-modules in app-module": {
@@ -30,17 +30,22 @@
 		"prefix": "app-module-material-use",
 		"body": [
 			"MatSidenavModule,",
-    		"MatButtonModule",
+			"MatButtonModule,",
+			"MatToolbarModule,",
+			"MatIconModule"
 		]
 	},
 	"Add material drawer in app.component": {
 		"scope": "html",
 		"prefix": "app-component-layout",
 		"body": [
-			"<div style=\"margin-bottom: 10px;\">",
-			"\t<button mat-raised-button color=\"primary\" (click)=\"drawer.toggle()\">Toggle user panel</button>",
-			"</div>",
-			"\n",
+			"<mat-toolbar color=\"primary\" class=\"toolbar\">",
+			"\t<button mat-icon-button (click)=\"drawer.toggle()\">",
+			"\t\t<mat-icon>menu</mat-icon>",
+			"\t</button>",
+			"\t<h1>WTM Chat</h1>",
+			"</mat-toolbar>",
+			"",
 			"<mat-drawer-container [hasBackdrop]=\"true\">",
 			"\t<mat-drawer #drawer mode=\"push\">",
 			"\t\t<wtm-users-panel></wtm-users-panel>",
@@ -49,17 +54,45 @@
 			"\t\t<wtm-message-panel></wtm-message-panel>",
 			"\t</mat-drawer-content>",
 			"</mat-drawer-container>",
-			"<wtm-login></wtm-login>"
-
+			"<wtm-login></wtm-login>\n"
 		]
 	},
 	"Add minimum width to mat-drawer": {
 		"scope": "scss",
 		"prefix": "app-component-scss",
 		"body": [
-			"mat-drawer {",
-			"\tmin-width: 180px;",
-			"}\n",			
+			":host {",
+			"\tdisplay: flex;",
+			"\tflex-direction: column;",
+			"\tposition: absolute;",
+			"\ttop: 0;",
+			"\tbottom: 0;",
+			"\tleft: 0;",
+			"\tright: 0;",
+			"",
+			"\tmat-drawer-container {",
+			"\t\theight: 100%;",
+			"\t}",
+			"",
+			"\t@media(max-width: 600px) {",
+			"\t\t.toolbar {",
+			"\t\t\tposition: fixed;",
+			"\t\t\tz-index: 2;",
+			"\t\t}",
+			"",
+			"\t\tmat-drawer-container {",
+			"\t\t\tmargin-top: 56px;",
+			"\t\t}",
+			"\t}",
+			"",
+			"\th1 {",
+			"\t\tmargin-left: 8px;",
+			"\t}",
+			"",
+			"\tmat-drawer {",
+			"\t\tmin-width: 180px;",
+			"\t}",
+			"}"
 		]
 	}
 }
